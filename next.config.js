@@ -1,21 +1,10 @@
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-
-let assetPrefix = undefined;
-
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  assetPrefix = `/${repo}/`;
-  console.log(`GitHub actions running. Setting assetPrefix to ${assetPrefix}`);
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // actions/configure-pages@v3 automatically injects 'basePath' and 'image.unoptimized' keys
   /**
-   * Ensure assets are correctly loaded from repository when in Github Pages
+   * Sets basePath to empty for development server. When published to GitHub will be updated to project slug
    */
-  assetPrefix,
+  basePath: '',
   /**
    * Enable static exports for the App Router.
    *
