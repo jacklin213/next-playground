@@ -1,5 +1,4 @@
 'use client'
-import AppLayout from "@cloudscape-design/components/app-layout";
 import Box from "@cloudscape-design/components/box";
 import Button from "@cloudscape-design/components/button";
 import Container from "@cloudscape-design/components/container";
@@ -8,7 +7,7 @@ import Header from "@cloudscape-design/components/header";
 import Link from "@cloudscape-design/components/link";
 import SpaceBetween from "@cloudscape-design/components/space-between";
 
-const Content = () => {
+export default function Page() {
   return (
     <ContentLayout
       header={
@@ -49,17 +48,5 @@ const Content = () => {
         </Box>
       </Container>
     </ContentLayout>
-  );
-};
-
-export default function Page() {
-  return (
-    <>
-      <AppLayout
-        navigationHide
-        toolsHide
-        content={<Content />}
-      />
-    </>
   );
 }
