@@ -1,3 +1,4 @@
+import '@cloudscape-design/global-styles/index.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
